@@ -1,7 +1,7 @@
 require 'fluent/plugin/in_tail'
 
 class Fluent::NewTailPathInput < Fluent::NewTailInput
-  Fluent::Plugin.register_output('in_taiL_path', self)
+  Fluent::Plugin.register_input('tail_path', self)
 
   config_param :path_key, :string, :default => nil
 
@@ -57,3 +57,5 @@ class Fluent::NewTailPathInput < Fluent::NewTailInput
     es
   end
 end
+
+
